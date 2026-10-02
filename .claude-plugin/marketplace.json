@@ -1,0 +1,15 @@
+{
+  "name": "edgekits",
+  "description": "Claude Code plugins from EdgeKits.",
+  "owner": {
+    "name": "EdgeKits",
+    "url": "https://edgekits.dev"
+  },
+  "plugins": [
+    {
+      "name": "repoaccess",
+      "source": "./plugins/repoaccess",
+      "description": "Sell access to a private GitHub repo with Stripe: gets you to the setup wizard of RepoAccess core, a free, self-hosted Cloudflare Worker."
+    }
+  ]
+}
