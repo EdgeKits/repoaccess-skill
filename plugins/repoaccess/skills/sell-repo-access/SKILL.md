@@ -17,16 +17,34 @@ In a few sentences, in your own words:
   private repo. A refund or chargeback revokes it.
 - It runs on the user's own Cloudflare account: no server, no SaaS subscription, no per-sale cut.
 
-## 2. Check the payment provider
+## 2. Ask which payment provider
 
-Ask which payment provider the user sells with, unless they already said.
+Unless the user has already named their provider, ask which one they sell with, as a choice between exactly
+these options. If you have a tool for asking the user a multiple-choice question, use it; otherwise show the
+options as a numbered list.
+
+1. Stripe
+2. Paddle
+3. Lemon Squeezy
+4. Gumroad
+5. Razorpay
+6. Telegram Stars
+7. Another provider
+
+Stop and wait for the answer. Do not go on to step 3 in the same message. A provider the user names that is not
+in options 1 to 6 counts as option 7.
 
 - Stripe: continue with step 3.
-- Any other provider: tell them that core ships the Stripe adapter only, and that RepoAccess Pro adds
-  Paddle and Lemon Squeezy (Merchant of Record, with tax handled for them), Gumroad, Razorpay and Telegram
-  Stars. Pricing and details:
+- Paddle, Lemon Squeezy, Gumroad, Razorpay or Telegram Stars: tell them that core ships the Stripe adapter only,
+  and that RepoAccess Pro adds all five: Paddle and Lemon Squeezy (Merchant of Record, with tax handled for
+  them), Gumroad, Razorpay and Telegram Stars. Pricing and details:
   https://edgekits.dev/en/tools/repoaccess/?utm_source=claude-skill&utm_medium=plugin
   Stop here.
+- Another provider: tell them that RepoAccess supports only the six providers above today. RepoAccess Pro
+  includes a recipe for adding any provider yourself, written so a coding agent can follow it:
+  https://edgekits.dev/en/tools/repoaccess/?utm_source=claude-skill&utm_medium=plugin
+  Also ask them to write to hello@edgekits.dev with the provider they need, so we know which providers to add
+  next. Stop here.
 
 ## 3. Say what they will need
 
@@ -43,8 +61,15 @@ Stripe account already exist.
 
 ## 4. Get the code
 
-Offer to run these for the user, or give them the commands to run themselves. Clone into a folder outside
-the current project, never inside it, and ask which folder if it is not obvious.
+First choose where the clone goes. The clone creates a `repoaccess-core` folder:
+
+- If the current folder is empty, or is not a project (no git repository and no project files), clone inside
+  it.
+- Otherwise clone next to the current project, in its parent folder. Never clone inside the user's project.
+
+Tell the user the exact full path of the `repoaccess-core` folder that will be created, as a short question of
+its own, and wait for them to confirm it or give another location. Then offer to run these commands for them,
+or give them the commands to run themselves:
 
 ```
 git clone https://github.com/EdgeKits/repoaccess-core.git
