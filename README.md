@@ -37,8 +37,10 @@ Selling with Paddle, Lemon Squeezy, Gumroad, Razorpay or Telegram Stars? Those a
 This plugin collects, stores and sends no data. It contains no code, no hooks and no MCP servers, only the
 instructions in `SKILL.md`. When you choose Stripe, it offers to run `git clone` and `npm install` in a folder you
 confirm; those download public code from GitHub and the npm registry, which handle the requests under their own
-terms. EdgeKits runs no service behind this plugin and receives nothing from it. If you email hello@edgekits.dev
-about a payment provider, your message is used only to reply to you and to decide which providers to support next.
+terms. EdgeKits runs no service behind this plugin, and the plugin itself sends EdgeKits nothing. The edgekits.dev
+links it shows carry a tag, so if you open one, the site can tell that the visit came from this plugin. If you email
+hello@edgekits.dev about a payment provider, your message is used only to reply to you and to decide which
+providers to support next.
 
 ## License
 
