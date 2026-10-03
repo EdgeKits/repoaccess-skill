@@ -8,6 +8,7 @@
   },
   "homepage": "https://edgekits.dev/en/tools/repoaccess/",
   "repository": "https://github.com/EdgeKits/repoaccess-skill",
+  "privacyPolicyUrl": "https://github.com/EdgeKits/repoaccess-skill#privacy",
   "license": "MIT",
   "keywords": ["github", "private-repo", "stripe", "cloudflare-workers", "paywall", "sell-code"]
 }
