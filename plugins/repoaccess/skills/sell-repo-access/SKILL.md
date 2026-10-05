@@ -77,6 +77,12 @@ cd repoaccess-core
 npm install
 ```
 
+If you run them for the user, check first that your shell runs on the user's own operating system. If it runs
+somewhere else, for example a Linux sandbox or VM while the user is on Windows or macOS, run only the
+`git clone`, then give the user `cd repoaccess-core` and `npm install` to run in their own terminal.
+Dependencies installed from another operating system bring native binaries, such as workerd and esbuild, that
+do not run on theirs.
+
 ## 5. Hand off to the wizard
 
 Tell the user to open a NEW terminal in the `repoaccess-core` folder and start their agent there:
