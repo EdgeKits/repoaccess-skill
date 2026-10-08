@@ -1,47 +1,43 @@
-# RepoAccess skill
+# EdgeKits skills
 
-A free agent skill for Claude Code, Cursor, OpenCode and any other coding agent that reads `SKILL.md`. Tell your
-agent you want to sell access to a private GitHub repo, and it gets you to the setup wizard of
-[RepoAccess core](https://github.com/EdgeKits/repoaccess-core): a free, open-source Cloudflare Worker that
-invites a buyer to your private repo when they pay through Stripe, and removes them on a refund or chargeback. It
-runs on your own Cloudflare account, with no SaaS subscription and no per-sale cut.
+Free agent skills from [EdgeKits](https://edgekits.dev), packaged as Claude plugins. They work in Claude
+Code and Claude Cowork, and in Cursor, OpenCode and any other coding agent that reads `SKILL.md`.
+
+| Plugin | What it does |
+| --- | --- |
+| [`repoaccess`](plugins/repoaccess/) | Sell access to a private GitHub repo with Stripe: gets you to the setup wizard of RepoAccess core, a free, self-hosted Cloudflare Worker. |
+| [`telegram-bot-security-audit`](plugins/telegram-bot-security-audit/) | Security audit for Telegram bot code: webhook and Mini App authenticity, chat identity, Stars payments, token leaks. The platform-specific holes generic scanners miss. |
+
+Each plugin installs on its own. Adding this repository as a marketplace installs nothing by itself.
 
 ## Install
 
-**Claude Code**, as a plugin:
+**Claude Code.** Add the marketplace once, then install the plugins you want:
 
 ```
-/plugin marketplace add EdgeKits/repoaccess-skill
+/plugin marketplace add EdgeKits/skills
+/plugin install telegram-bot-security-audit@edgekits
 /plugin install repoaccess@edgekits
 ```
+
+Or run `/plugin`, open **Discover**, and pick from the list.
+
+**Claude Cowork.** Customize > Plugins > Add marketplace, enter `EdgeKits/skills`, then add the plugins you
+want from Discover.
 
 **Any other agent**, with the [skills CLI](https://skills.sh):
 
 ```
-npx skills add EdgeKits/repoaccess-skill
+npx skills add EdgeKits/skills --list
+npx skills add EdgeKits/skills --skill telegram-bot-security-audit
 ```
-
-Then, in any project, tell your agent something like "I want to sell access to my private GitHub repo".
-
-## What it does
-
-The skill explains what RepoAccess core is, checks that you sell with Stripe, helps you clone the core
-repository, and sends you to its `/repoaccess-setup` wizard in a new session. The wizard does the setup.
-The skill itself never touches your secrets and never sets anything up.
-
-Selling with Paddle, Lemon Squeezy, Gumroad, Razorpay or Telegram Stars? Those are in
-[RepoAccess Pro](https://edgekits.dev/en/tools/repoaccess/).
 
 ## Privacy
 
-This plugin collects, stores and sends no data. It contains no code, no hooks and no MCP servers, only the
-instructions in `SKILL.md`. When you choose Stripe, it offers to run `git clone` and `npm install` in a folder you
-confirm; those download public code from GitHub and the npm registry, which handle the requests under their own
-terms. EdgeKits runs no service behind this plugin, and the plugin itself sends EdgeKits nothing. The edgekits.dev
-links it shows carry a tag, so if you open one, the site can tell that the visit came from this plugin. If you email
-hello@edgekits.dev about a payment provider, your message is used only to reply to you and to decide which
-providers to support next.
+None of these plugins collects, stores or sends data, and none contains code, hooks or MCP servers: they
+are instructions for your agent. Each plugin's README has its own privacy section with the details:
+[RepoAccess](plugins/repoaccess/#privacy), [Telegram Bot Security Audit](plugins/telegram-bot-security-audit/#privacy).
 
 ## License
 
-MIT
+MIT, see [LICENSE](LICENSE).

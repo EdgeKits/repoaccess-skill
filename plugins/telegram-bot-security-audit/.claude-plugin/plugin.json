@@ -1,0 +1,15 @@
+{
+  "name": "telegram-bot-security-audit",
+  "version": "1.0.0",
+  "displayName": "Telegram Bot Security Audit",
+  "description": "Security audit for Telegram bot code: webhook and Mini App authenticity, admin gates, chat identity in groups and guest mode, Stars payments and refunds, token leaks. The platform-specific holes generic scanners miss.",
+  "author": {
+    "name": "EdgeKits",
+    "url": "https://edgekits.dev"
+  },
+  "homepage": "https://github.com/EdgeKits/skills/tree/main/plugins/telegram-bot-security-audit",
+  "repository": "https://github.com/EdgeKits/skills",
+  "privacyPolicyUrl": "https://github.com/EdgeKits/skills/tree/main/plugins/telegram-bot-security-audit#privacy",
+  "license": "MIT",
+  "keywords": ["telegram", "telegram-bot", "bot-api", "security", "audit", "code-review", "telegram-stars", "mini-apps"]
+}

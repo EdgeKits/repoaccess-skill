@@ -1,5 +1,6 @@
 {
   "name": "repoaccess",
+  "version": "1.0.0",
   "displayName": "RepoAccess",
   "description": "Sell access to a private GitHub repo with Stripe: gets you to the setup wizard of RepoAccess core, a free, self-hosted Cloudflare Worker.",
   "author": {
@@ -7,8 +8,8 @@
     "url": "https://edgekits.dev"
   },
   "homepage": "https://edgekits.dev/en/tools/repoaccess/",
-  "repository": "https://github.com/EdgeKits/repoaccess-skill",
-  "privacyPolicyUrl": "https://github.com/EdgeKits/repoaccess-skill#privacy",
+  "repository": "https://github.com/EdgeKits/skills",
+  "privacyPolicyUrl": "https://github.com/EdgeKits/skills/tree/main/plugins/repoaccess#privacy",
   "license": "MIT",
   "keywords": ["github", "private-repo", "stripe", "cloudflare-workers", "paywall", "sell-code"]
 }

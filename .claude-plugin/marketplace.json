@@ -1,6 +1,6 @@
 {
   "name": "edgekits",
-  "description": "Claude Code plugins from EdgeKits.",
+  "description": "Agent skills and Claude plugins from EdgeKits.",
   "owner": {
     "name": "EdgeKits",
     "url": "https://edgekits.dev"
@@ -10,6 +10,11 @@
       "name": "repoaccess",
       "source": "./plugins/repoaccess",
       "description": "Sell access to a private GitHub repo with Stripe: gets you to the setup wizard of RepoAccess core, a free, self-hosted Cloudflare Worker."
+    },
+    {
+      "name": "telegram-bot-security-audit",
+      "source": "./plugins/telegram-bot-security-audit",
+      "description": "Security audit for Telegram bot code: webhook and Mini App authenticity, admin gates, chat identity in groups and guest mode, Stars payments and refunds, token leaks. The platform-specific holes generic scanners miss."
     }
   ]
 }
