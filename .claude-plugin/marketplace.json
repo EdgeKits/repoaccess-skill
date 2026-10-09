@@ -15,6 +15,11 @@
       "name": "telegram-bot-security-audit",
       "source": "./plugins/telegram-bot-security-audit",
       "description": "Security audit for Telegram bot code: webhook and Mini App authenticity, admin gates, chat identity in groups and guest mode, Stars payments and refunds, token leaks. The platform-specific holes generic scanners miss."
+    },
+    {
+      "name": "project-journal",
+      "source": "./plugins/project-journal",
+      "description": "Persistent project memory for Claude Code: a small markdown journal loads at every session start, every session is captured when it ends, and decisions become ADRs."
     }
   ]
 }

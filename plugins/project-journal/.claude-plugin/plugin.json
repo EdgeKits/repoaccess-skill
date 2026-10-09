@@ -1,0 +1,14 @@
+{
+  "name": "project-journal",
+  "version": "1.0.0",
+  "displayName": "Project Journal",
+  "description": "Persistent project memory for Claude Code: a small markdown journal loads at every session start, every session is captured when it ends, and decisions become ADRs, so the agent picks up where you left off without re-learning the project.",
+  "author": {
+    "name": "EdgeKits",
+    "url": "https://edgekits.dev"
+  },
+  "homepage": "https://github.com/EdgeKits/skills/tree/main/plugins/project-journal",
+  "repository": "https://github.com/EdgeKits/skills",
+  "license": "MIT",
+  "keywords": ["memory", "journal", "context", "hooks", "adr", "session", "resume"]
+}
