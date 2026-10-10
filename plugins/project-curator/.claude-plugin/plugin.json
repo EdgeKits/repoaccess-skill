@@ -1,0 +1,14 @@
+{
+  "name": "project-curator",
+  "version": "1.0.0",
+  "displayName": "Project Curator",
+  "description": "A curator for projects built with a coding agent: verifies the agent's reports against the sources, argues options with you, and writes the relay prompts you hand to the agent. Keeps its own memory per project and opens every chat from it.",
+  "author": {
+    "name": "EdgeKits",
+    "url": "https://edgekits.dev"
+  },
+  "homepage": "https://github.com/EdgeKits/skills/tree/main/plugins/project-curator",
+  "repository": "https://github.com/EdgeKits/skills",
+  "license": "MIT",
+  "keywords": ["curator", "code-review", "coding-agent", "relay", "verification", "cowork", "workflow"]
+}

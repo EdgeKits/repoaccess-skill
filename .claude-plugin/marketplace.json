@@ -20,6 +20,11 @@
       "name": "project-journal",
       "source": "./plugins/project-journal",
       "description": "Persistent project memory for Claude Code: a small markdown journal loads at every session start, every session is captured when it ends, and decisions become ADRs."
+    },
+    {
+      "name": "project-curator",
+      "source": "./plugins/project-curator",
+      "description": "A curator for projects built with a coding agent: verifies the agent's reports against the sources, argues options with you, and writes the relay prompts you hand to the agent."
     }
   ]
 }
